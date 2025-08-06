@@ -19,7 +19,7 @@ services:
           memory: '30MB'
 
   backend-go-1:
-    image: arthurschur/rinha-de-golo:v.1.2.4
+    image: arthurschur/rinha-de-golo:v.1.2.2
     container_name: backend-go-1
     hostname: backend-go-1
     expose:
@@ -41,7 +41,7 @@ services:
           memory: '110MB'
 
   backend-go-2:
-    image: arthurschur/rinha-de-golo:v.1.2.4
+    image: arthurschur/rinha-de-golo:v.1.2.2
     container_name: backend-go-2
     hostname: backend-go-2
     expose:
