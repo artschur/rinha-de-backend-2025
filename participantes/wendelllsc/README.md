@@ -1,4 +1,4 @@
-# Rinha de Backend 2025 - CCS1201
+# Rinha de Backend 2025
 
 ## Tecnologias utilizadas
 
@@ -19,4 +19,4 @@
 
 ## Repositório do código-fonte
 
-[GitHub](https://github.com/wendelllsc/rinha-backend-2015)
+[GitHub](https://github.com/wendelllsc/rinha-de-backend-2025)

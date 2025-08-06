@@ -1,6 +1,6 @@
 x-service-templates:
   api: &api
-    image: marcosmarcolin/rinhadebackend2025:2.3.0
+    image: marcosmarcolin/rinhadebackend2025:2.5.0
     entrypoint: [ "php", "/opt/www/app/public/index.php" ]
     depends_on:
       redis:
@@ -12,10 +12,10 @@ x-service-templates:
       resources:
         limits:
           cpus: "0.35"
-          memory: "100M"
+          memory: "90M"
 
   worker-template: &worker
-    image: marcosmarcolin/rinhadebackend2025:2.3.0
+    image: marcosmarcolin/rinhadebackend2025:2.5.0
     depends_on:
       redis:
         condition: service_healthy
@@ -24,14 +24,14 @@ x-service-templates:
       - payment-processor
 
 services:
-  worker-payments:
+  worker-payments-default:
     <<: *worker
     entrypoint: [ "php", "/opt/www/app/workers/payments.php" ]
     deploy:
       resources:
         limits:
           cpus: "0.2"
-          memory: "50M"
+          memory: "70M"
 
   worker-health:
     <<: *worker

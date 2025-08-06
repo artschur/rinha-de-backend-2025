@@ -16,8 +16,7 @@ services:
         limits:
           cpus: "0.3"
           memory: "50MB"
-
-  backend-01: &backend
+backend-01: &backend
     image: lecosas/rinha-backend-2025-java-spring-graalvm:latest
     container_name: backend-01
     hostname: backend-01
@@ -26,7 +25,7 @@ services:
       - payment-processor
     environment:
       - SPRING_PROFILES_ACTIVE=prod
-      - PAYMENT_BACKEND_MAIN_INSTANCE=true
+      - PAYMENT_BACKEND_MAIN_INSTANCE=false
       - PAYMENT_BACKEND_WORKER_FALLBACK_DELAY=2
       - PAYMENT_BACKEND_WORKER_THREAD_DELAY=2
       - HTTPCLIENT_CONNECTION_TIMEOUT=5000
@@ -69,7 +68,6 @@ services:
       - PAYMENT_PROCESSOR_FALLBACK_URL=http://payment-processor-fallback:8080
       - REDIS_HOST=redis
       - REDIS_PORT=6379
-
   redis:
     image: redis:7-alpine
     container_name: redis
@@ -86,9 +84,3 @@ services:
         limits:
           cpus: "0.1"
           memory: "40MB" #Change in command line too.
-
-networks:
-  backend:
-    driver: bridge
-  payment-processor:
-    external: true

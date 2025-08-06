@@ -1,53 +1,208 @@
 
+ api02 Pulling 
+ worker-payments-default Pulling 
+ worker-health Pulling 
+ api01 Pulling 
+ 9824c27679d3 Already exists 
+ e2b8c404eae6 Already exists 
+ fa0d882c5edb Already exists 
+ 769d794d159a Already exists 
+ cf3cf3bc6932 Already exists 
+ 7a7066989316 Already exists 
+ f2176a4cebfd Already exists 
+ c43e4b7ed65e Already exists 
+ 7d1d54c809af Already exists 
+ 2151aa88e776 Already exists 
+ d763ace68712 Pulling fs layer 
+ 0ab304311c82 Pulling fs layer 
+ 34de13046756 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ e2b8c404eae6 Already exists 
+ fa0d882c5edb Already exists 
+ 769d794d159a Already exists 
+ cf3cf3bc6932 Already exists 
+ 7a7066989316 Already exists 
+ f2176a4cebfd Already exists 
+ c43e4b7ed65e Already exists 
+ 7d1d54c809af Already exists 
+ 2151aa88e776 Already exists 
+ d763ace68712 Pulling fs layer 
+ 0ab304311c82 Pulling fs layer 
+ 34de13046756 Pulling fs layer 
+ 9824c27679d3 Already exists 
+ e2b8c404eae6 Already exists 
+ fa0d882c5edb Already exists 
+ 769d794d159a Already exists 
+ cf3cf3bc6932 Already exists 
+ 7a7066989316 Already exists 
+ f2176a4cebfd Already exists 
+ c43e4b7ed65e Already exists 
+ 7d1d54c809af Already exists 
+ 2151aa88e776 Already exists 
+ 34de13046756 Downloading [>                                                  ]     936B/55.65kB
+ 34de13046756 Downloading [>                                                  ]     936B/55.65kB
+ d763ace68712 Pulling fs layer 
+ 0ab304311c82 Pulling fs layer 
+ 34de13046756 Pulling fs layer 
+ 34de13046756 Downloading [>                                                  ]     936B/55.65kB
+ 34de13046756 Verifying Checksum 
+ 34de13046756 Download complete 
+ 34de13046756 Verifying Checksum 
+ 34de13046756 Verifying Checksum 
+ 34de13046756 Download complete 
+ 34de13046756 Download complete 
+ d763ace68712 Downloading [>                                                  ]  273.9kB/27.02MB
+ d763ace68712 Downloading [>                                                  ]  273.9kB/27.02MB
+ d763ace68712 Downloading [>                                                  ]  273.9kB/27.02MB
+ 9824c27679d3 Already exists 
+ e2b8c404eae6 Already exists 
+ fa0d882c5edb Already exists 
+ d763ace68712 Downloading [=================>                                 ]  9.481MB/27.02MB
+ d763ace68712 Downloading [=================>                                 ]  9.481MB/27.02MB
+ d763ace68712 Downloading [=================>                                 ]  9.481MB/27.02MB
+ 769d794d159a Already exists 
+ cf3cf3bc6932 Already exists 
+ 7a7066989316 Already exists 
+ f2176a4cebfd Already exists 
+ c43e4b7ed65e Already exists 
+ 7d1d54c809af Already exists 
+ 2151aa88e776 Already exists 
+ d763ace68712 Pulling fs layer 
+ 0ab304311c82 Pulling fs layer 
+ 34de13046756 Pulling fs layer 
+ 34de13046756 Download complete 
+ d763ace68712 Downloading [=================>                                 ]  9.481MB/27.02MB
+ d763ace68712 Downloading [=========================================>         ]   22.6MB/27.02MB
+ d763ace68712 Downloading [=========================================>         ]   22.6MB/27.02MB
+ d763ace68712 Downloading [=========================================>         ]   22.6MB/27.02MB
+ d763ace68712 Downloading [=========================================>         ]   22.6MB/27.02MB
+ d763ace68712 Verifying Checksum 
+ d763ace68712 Download complete 
+ d763ace68712 Download complete 
+ d763ace68712 Verifying Checksum 
+ d763ace68712 Download complete 
+ d763ace68712 Verifying Checksum 
+ d763ace68712 Download complete 
+ d763ace68712 Extracting [>                                                  ]  294.9kB/27.02MB
+ d763ace68712 Extracting [>                                                  ]  294.9kB/27.02MB
+ d763ace68712 Extracting [>                                                  ]  294.9kB/27.02MB
+ d763ace68712 Extracting [>                                                  ]  294.9kB/27.02MB
+ d763ace68712 Extracting [==============>                                    ]  7.668MB/27.02MB
+ d763ace68712 Extracting [==============>                                    ]  7.668MB/27.02MB
+ d763ace68712 Extracting [==============>                                    ]  7.668MB/27.02MB
+ d763ace68712 Extracting [==============>                                    ]  7.668MB/27.02MB
+ d763ace68712 Extracting [================>                                  ]  9.142MB/27.02MB
+ d763ace68712 Extracting [================>                                  ]  9.142MB/27.02MB
+ d763ace68712 Extracting [================>                                  ]  9.142MB/27.02MB
+ d763ace68712 Extracting [================>                                  ]  9.142MB/27.02MB
+ d763ace68712 Extracting [=================================>                 ]  18.28MB/27.02MB
+ d763ace68712 Extracting [=================================>                 ]  18.28MB/27.02MB
+ d763ace68712 Extracting [=================================>                 ]  18.28MB/27.02MB
+ d763ace68712 Extracting [=================================>                 ]  18.28MB/27.02MB
+ d763ace68712 Extracting [=============================================>     ]  24.77MB/27.02MB
+ d763ace68712 Extracting [=============================================>     ]  24.77MB/27.02MB
+ d763ace68712 Extracting [=============================================>     ]  24.77MB/27.02MB
+ d763ace68712 Extracting [=============================================>     ]  24.77MB/27.02MB
+ d763ace68712 Extracting [=================================================> ]  26.84MB/27.02MB
+ d763ace68712 Extracting [=================================================> ]  26.84MB/27.02MB
+ d763ace68712 Extracting [=================================================> ]  26.84MB/27.02MB
+ d763ace68712 Extracting [=================================================> ]  26.84MB/27.02MB
+ d763ace68712 Extracting [==================================================>]  27.02MB/27.02MB
+ d763ace68712 Extracting [==================================================>]  27.02MB/27.02MB
+ d763ace68712 Extracting [==================================================>]  27.02MB/27.02MB
+ d763ace68712 Extracting [==================================================>]  27.02MB/27.02MB
+ d763ace68712 Pull complete 
+ d763ace68712 Pull complete 
+ d763ace68712 Pull complete 
+ d763ace68712 Pull complete 
+ 0ab304311c82 Downloading [==================================================>]     124B/124B
+ 0ab304311c82 Downloading [==================================================>]     124B/124B
+ 0ab304311c82 Verifying Checksum 
+ 0ab304311c82 Verifying Checksum 
+ 0ab304311c82 Download complete 
+ 0ab304311c82 Download complete 
+ 0ab304311c82 Downloading [==================================================>]     124B/124B
+ 0ab304311c82 Verifying Checksum 
+ 0ab304311c82 Verifying Checksum 
+ 0ab304311c82 Download complete 
+ 0ab304311c82 Download complete 
+ 0ab304311c82 Extracting [==================================================>]     124B/124B
+ 0ab304311c82 Extracting [==================================================>]     124B/124B
+ 0ab304311c82 Extracting [==================================================>]     124B/124B
+ 0ab304311c82 Extracting [==================================================>]     124B/124B
+ 0ab304311c82 Extracting [==================================================>]     124B/124B
+ 0ab304311c82 Extracting [==================================================>]     124B/124B
+ 0ab304311c82 Extracting [==================================================>]     124B/124B
+ 0ab304311c82 Extracting [==================================================>]     124B/124B
+ 0ab304311c82 Pull complete 
+ 0ab304311c82 Pull complete 
+ 0ab304311c82 Pull complete 
+ 0ab304311c82 Pull complete 
+ 34de13046756 Extracting [=============================>                     ]  32.77kB/55.65kB
+ 34de13046756 Extracting [=============================>                     ]  32.77kB/55.65kB
+ 34de13046756 Extracting [=============================>                     ]  32.77kB/55.65kB
+ 34de13046756 Extracting [=============================>                     ]  32.77kB/55.65kB
+ 34de13046756 Extracting [==================================================>]  55.65kB/55.65kB
+ 34de13046756 Extracting [==================================================>]  55.65kB/55.65kB
+ 34de13046756 Extracting [==================================================>]  55.65kB/55.65kB
+ 34de13046756 Extracting [==================================================>]  55.65kB/55.65kB
+ 34de13046756 Pull complete 
+ 34de13046756 Pull complete 
+ 34de13046756 Pull complete 
+ 34de13046756 Pull complete 
+ api02 Pulled 
+ worker-payments-default Pulled 
+ api01 Pulled 
+ worker-health Pulled 
  Network marcosmarcolin-php_backend  Creating
  Network marcosmarcolin-php_backend  Created
  Container marcosmarcolin-php-redis-1  Creating
  Container marcosmarcolin-php-redis-1  Created
  Container marcosmarcolin-php-worker-health-1  Creating
  Container marcosmarcolin-php-api01-1  Creating
- Container marcosmarcolin-php-worker-payments-1  Creating
+ Container marcosmarcolin-php-worker-payments-default-1  Creating
  Container marcosmarcolin-php-api02-1  Creating
- Container marcosmarcolin-php-worker-health-1  Created
  Container marcosmarcolin-php-api02-1  Created
- Container marcosmarcolin-php-worker-payments-1  Created
+ Container marcosmarcolin-php-worker-health-1  Created
  Container marcosmarcolin-php-api01-1  Created
  Container marcosmarcolin-php-haproxy-1  Creating
+ Container marcosmarcolin-php-worker-payments-default-1  Created
  Container marcosmarcolin-php-haproxy-1  Created
-Attaching to api01-1, api02-1, haproxy-1, redis-1, worker-health-1, worker-payments-1
-redis-1            | Starting Redis Server
-api02-1            | [Swoole] Servidor iniciado na porta 9501
-api01-1            | [Swoole] Servidor iniciado na porta 9501
-worker-payments-1  | [WorkerPayments] Iniciando com 20 Coroutines
-worker-health-1    | [WorkerHealth] Iniciando monitoramento...
-worker-health-1    | [WorkerHealth] Processador atual: default
-haproxy-1          | [NOTICE]   (1) : Initializing new worker (9)
-haproxy-1          | [NOTICE]   (1) : Loading success.
-worker-health-1    | [WorkerHealth] Processador atual: default
-worker-health-1    | [WorkerHealth] Processador atual: default
-worker-health-1    | [WorkerHealth] Processador atual: default
-worker-health-1    | [WorkerHealth] Processador atual: default
-worker-health-1    | [WorkerHealth] Processador atual: default
-worker-health-1    | [WorkerHealth] Processador atual: fallback
-worker-health-1    | [WorkerHealth] Reabilitado processador default
-worker-health-1    | [WorkerHealth] Processador atual: fallback
-worker-health-1    | [WorkerHealth] Reabilitado processador default
-worker-health-1    | [WorkerHealth] Processador atual: default
-worker-health-1    | [WorkerHealth] Processador atual: default
-worker-health-1    | [WorkerHealth] Processador atual: default
-worker-health-1    | [WorkerHealth] Processador atual: default
-haproxy-1          | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
-haproxy-1          | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
-haproxy-1          | [WARNING]  (1) : Exiting Master process...
-haproxy-1          | [WARNING]  (9) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
-haproxy-1          | [WARNING]  (9) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16699).
-haproxy-1          | [WARNING]  (1) : Current worker (9) exited with code 0 (Exit)
-haproxy-1          | [WARNING]  (1) : All workers exited. Exiting... (0)
+Attaching to api01-1, api02-1, haproxy-1, redis-1, worker-health-1, worker-payments-default-1
+redis-1                    | Starting Redis Server
+api01-1                    | [Swoole] Servidor iniciado na porta 9501
+api02-1                    | [Swoole] Servidor iniciado na porta 9501
+worker-payments-default-1  | [Worker:default] Iniciando processamento com 20 Coroutines
+worker-payments-default-1  | [Worker:fallback] Iniciando processamento com 16 Coroutines
+worker-health-1            | [WorkerHealth] Iniciando monitoramento...
+worker-health-1            | [WorkerHealth] Processador atual: default
+haproxy-1                  | [NOTICE]   (1) : Initializing new worker (8)
+haproxy-1                  | [NOTICE]   (1) : Loading success.
+worker-health-1            | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: fallback
+worker-health-1            | [WorkerHealth] Processador atual: fallback
+worker-health-1            | [WorkerHealth] Processador atual: off
+worker-health-1            | [WorkerHealth] Processador atual: off
+worker-health-1            | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: default
+haproxy-1                  | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1                  | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1                  | [WARNING]  (1) : Exiting Master process...
+haproxy-1                  | [WARNING]  (8) : Proxy frontend stopped (cumulated conns: FE: 553, BE: 0).
+haproxy-1                  | [WARNING]  (8) : Proxy backend stopped (cumulated conns: FE: 0, BE: 16741).
+haproxy-1                  | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy-1                  | [WARNING]  (1) : All workers exited. Exiting... (0)
 [Khaproxy-1 exited with code 0
-[Kapi01-1 exited with code 0
 [Kapi02-1 exited with code 0
-worker-health-1    | [WorkerHealth] Processador atual: default
-worker-health-1    | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: default
+worker-health-1            | [WorkerHealth] Processador atual: default
+[Kworker-payments-default-1 exited with code 137
 [Kworker-health-1 exited with code 137
-[Kworker-payments-1 exited with code 137
 [Kredis-1 exited with code 0
 log truncated at line 1000

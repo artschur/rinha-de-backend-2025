@@ -28,10 +28,8 @@ backend-db     | selecting default time zone ... UTC
 backend-db     | creating configuration files ... ok
 backend-db     | running bootstrap script ... ok
 backend-db     | sh: locale: not found
-backend-db     | 2025-08-05 01:55:20.218 UTC [35] WARNING:  no usable system locales were found
+backend-db     | 2025-08-06 17:16:07.902 UTC [36] WARNING:  no usable system locales were found
 backend-db     | performing post-bootstrap initialization ... ok
-backend-db     | initdb: warning: enabling "trust" authentication for local connections
-backend-db     | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
 backend-db     | syncing data to disk ... ok
 backend-db     | 
 backend-db     | 
@@ -39,13 +37,14 @@ backend-db     | Success. You can now start the database server using:
 backend-db     | 
 backend-db     |     pg_ctl -D /var/lib/postgresql/data -l logfile start
 backend-db     | 
-backend-db     | waiting for server to start....2025-08-05 01:55:23.632 UTC [47] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-backend-db     | 2025-08-05 01:55:23.637 UTC [47] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-backend-db     | 2025-08-05 01:55:23.656 UTC [50] LOG:  database system was shut down at 2025-08-05 01:55:22 UTC
-backend-db     | 2025-08-05 01:55:23.712 UTC [47] LOG:  database system is ready to accept connections
+backend-db     | initdb: warning: enabling "trust" authentication for local connections
+backend-db     | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+backend-db     | waiting for server to start....2025-08-06 17:16:10.820 UTC [48] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+backend-db     | 2025-08-06 17:16:10.825 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+backend-db     | 2025-08-06 17:16:10.845 UTC [51] LOG:  database system was shut down at 2025-08-06 17:16:10 UTC
+backend-db     | 2025-08-06 17:16:10.853 UTC [48] LOG:  database system is ready to accept connections
 backend-db     |  done
 backend-db     | server started
-backend-db     | 2025-08-05 01:55:24.004 UTC [65] FATAL:  database "rinha" does not exist
 backend-db     | CREATE DATABASE
 backend-db     | 
 backend-db     | 
@@ -58,23 +57,36 @@ backend-db     |
 backend-db     | 
 backend-db     | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/postgresql.conf
 backend-db     | 
-backend-db     | waiting for server to shut down....2025-08-05 01:55:24.913 UTC [47] LOG:  received fast shutdown request
-backend-db     | 2025-08-05 01:55:24.920 UTC [47] LOG:  aborting any active transactions
-backend-api2   | 2025-08-05 01:55:24 [main] [34mINFO [0;39m [36mbr.com.ccs.rinha.RinhaApp[0;39m - Starting server on port 8080
-backend-api2   | 
-backend-api2   |  ##########     (Si vis pacem, para bellum)     ##########
-backend-api2   | >>> ccs1201 follow on linkedisney -> https://www.linkedin.com/in/ccs1201/
-backend-api2   | >>> follow on github -> https://github.com/ccs1201
-backend-api2   | 
-backend-api1   | 2025-08-05 01:55:24 [main] [34mINFO [0;39m [36mbr.com.ccs.rinha.RinhaApp[0;39m - Starting server on port 8080
+backend-db     | waiting for server to shut down....2025-08-06 17:16:12.204 UTC [48] LOG:  received fast shutdown request
+backend-db     | 2025-08-06 17:16:12.217 UTC [48] LOG:  aborting any active transactions
+backend-db     | 2025-08-06 17:16:12.220 UTC [48] LOG:  background worker "logical replication launcher" (PID 54) exited with exit code 1
+backend-db     | 2025-08-06 17:16:12.221 UTC [49] LOG:  shutting down
+backend-db     | 2025-08-06 17:16:12.234 UTC [49] LOG:  checkpoint starting: shutdown immediate
+backend-db     | 2025-08-06 17:16:12.447 UTC [49] LOG:  checkpoint complete: wrote 1124 buffers (6.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.070 s, sync=0.101 s, total=0.226 s; sync files=306, longest=0.011 s, average=0.001 s; distance=4268 kB, estimate=4268 kB; lsn=0/1918270, redo lsn=0/1918270
+backend-db     | 2025-08-06 17:16:12.455 UTC [48] LOG:  database system is shut down
+backend-db     |  done
+backend-db     | server stopped
+backend-db     | 
+backend-db     | PostgreSQL init process complete; ready for start up.
+backend-db     | 
+backend-db     | 2025-08-06 17:16:12.542 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+backend-db     | 2025-08-06 17:16:12.543 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+backend-db     | 2025-08-06 17:16:12.543 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+backend-db     | 2025-08-06 17:16:12.557 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+backend-db     | 2025-08-06 17:16:12.604 UTC [73] LOG:  database system was shut down at 2025-08-06 17:16:12 UTC
+backend-db     | 2025-08-06 17:16:12.622 UTC [1] LOG:  database system is ready to accept connections
+backend-api1   | 2025-08-06 17:16:12 [main] [34mINFO [0;39m [36mbr.com.ccs.rinha.RinhaApp[0;39m - Starting server on port 8080
 backend-api1   | 
 backend-api1   |  ##########     (Si vis pacem, para bellum)     ##########
 backend-api1   | >>> ccs1201 follow on linkedisney -> https://www.linkedin.com/in/ccs1201/
 backend-api1   | >>> follow on github -> https://github.com/ccs1201
 backend-api1   | 
-backend-db     | 2025-08-05 01:55:25.004 UTC [47] LOG:  background worker "logical replication launcher" (PID 53) exited with exit code 1
-backend-db     | 2025-08-05 01:55:25.006 UTC [48] LOG:  shutting down
-backend-db     | 2025-08-05 01:55:25.015 UTC [48] LOG:  checkpoint starting: shutdown immediate
+backend-api2   | 2025-08-06 17:16:12 [main] [34mINFO [0;39m [36mbr.com.ccs.rinha.RinhaApp[0;39m - Starting server on port 8080
+backend-api2   | 
+backend-api2   |  ##########     (Si vis pacem, para bellum)     ##########
+backend-api2   | >>> ccs1201 follow on linkedisney -> https://www.linkedin.com/in/ccs1201/
+backend-api2   | >>> follow on github -> https://github.com/ccs1201
+backend-api2   | 
 backend-nginx  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
 backend-nginx  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
 backend-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
@@ -84,102 +96,77 @@ backend-nginx  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-r
 backend-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 backend-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 backend-nginx  | /docker-entrypoint.sh: Configuration complete; ready for start up
-backend-db     | 2025-08-05 01:55:25.212 UTC [48] LOG:  checkpoint complete: wrote 1124 buffers (6.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.051 s, sync=0.095 s, total=0.207 s; sync files=306, longest=0.027 s, average=0.001 s; distance=4268 kB, estimate=4268 kB; lsn=0/1918270, redo lsn=0/1918270
-backend-db     | 2025-08-05 01:55:25.220 UTC [47] LOG:  database system is shut down
-backend-db     |  done
-backend-db     | server stopped
-backend-db     | 
-backend-db     | PostgreSQL init process complete; ready for start up.
-backend-db     | 
-backend-db     | 2025-08-05 01:55:25.348 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
-backend-db     | 2025-08-05 01:55:25.348 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
-backend-db     | 2025-08-05 01:55:25.348 UTC [1] LOG:  listening on IPv6 address "::", port 5432
-backend-db     | 2025-08-05 01:55:25.358 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
-backend-db     | 2025-08-05 01:55:25.416 UTC [72] LOG:  database system was shut down at 2025-08-05 01:55:25 UTC
-backend-db     | 2025-08-05 01:55:25.429 UTC [1] LOG:  database system is ready to accept connections
-backend-api2   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source URL: jdbc:postgresql://postgres:5432/rinha
-backend-api2   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Username: rinha
-backend-api2   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Password: rinha
-backend-api2   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Timeout: 20000
-backend-api2   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Minimum Idle: 3
-backend-api2   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Maximum Pool Size: 3
-backend-api2   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Configured com.zaxxer.hikari.HikariConfig@795ff3ca
-backend-api2   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
-backend-api1   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source URL: jdbc:postgresql://postgres:5432/rinha
-backend-api1   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Username: rinha
-backend-api1   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Password: rinha
-backend-api1   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Timeout: 20000
-backend-api1   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Minimum Idle: 3
-backend-api1   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Maximum Pool Size: 3
-backend-api1   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Configured com.zaxxer.hikari.HikariConfig@cd6c4bf
-backend-api1   | 2025-08-05 01:55:25 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f94b1c
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - JdbcPaymentRepository workers started
-backend-api1   | 2025-08-05 01:55:26 [repository-worker-0] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - Repository worker 0 started
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mio.undertow[0;39m - starting server: Undertow - 2.3.18.Final
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36morg.xnio[0;39m - XNIO version 3.8.16.Final
-backend-api1   | 2025-08-05 01:55:26 [repository-worker-1] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - Repository worker 1 started
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36morg.xnio.nio[0;39m - XNIO NIO Implementation Version 3.8.16.Final
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2dbe3558
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - JdbcPaymentRepository workers started
-backend-api2   | 2025-08-05 01:55:26 [repository-worker-0] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - Repository worker 0 started
-backend-api2   | 2025-08-05 01:55:26 [repository-worker-1] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - Repository worker 1 started
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mio.undertow[0;39m - starting server: Undertow - 2.3.18.Final
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36morg.xnio[0;39m - XNIO version 3.8.16.Final
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36morg.jboss.threads[0;39m - JBoss Threads version 3.5.0.Final
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36morg.xnio.nio[0;39m - XNIO NIO Implementation Version 3.8.16.Final
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Default service URL: http://payment-processor-default:8080/payments 
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36morg.jboss.threads[0;39m - JBoss Threads version 3.5.0.Final
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Fallback fallback URL: http://payment-processor-fallback:8080/payments
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Timeout: PT6S
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-0] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 0
-backend-api1   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor workers: 10
-backend-api1   | 
-backend-api1   |  ##########     (Si vis pacem, para bellum)     ##########
-backend-api1   | >>> ccs1201 follow on linkedisney -> https://www.linkedin.com/in/ccs1201/
-backend-api1   | >>> follow on github -> https://github.com/ccs1201
-backend-api1   | 
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-1] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 1
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-2] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 2
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-3] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 3
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-4] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 4
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-6] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 6
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-7] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 7
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-8] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 8
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-9] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 9
-backend-api1   | 2025-08-05 01:55:26 [payment-processor-5] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 5
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Default service URL: http://payment-processor-default:8080/payments 
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Fallback fallback URL: http://payment-processor-fallback:8080/payments
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Timeout: PT6S
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-0] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 0
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-1] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 1
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-2] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 2
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-3] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 3
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-4] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 4
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-5] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 5
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-6] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 6
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-7] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 7
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-8] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 8
-backend-api2   | 2025-08-05 01:55:26 [payment-processor-9] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 9
-backend-api2   | 2025-08-05 01:55:26 [main] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor workers: 10
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source URL: jdbc:postgresql://postgres:5432/rinha
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Username: rinha
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Password: rinha
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Timeout: 20000
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Minimum Idle: 3
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Maximum Pool Size: 3
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Configured com.zaxxer.hikari.HikariConfig@22b208e0
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source URL: jdbc:postgresql://postgres:5432/rinha
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Username: rinha
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Password: rinha
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Timeout: 20000
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Minimum Idle: 3
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Maximum Pool Size: 3
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.rinha.config.DataSourceFactory[0;39m - Data Source Configured com.zaxxer.hikari.HikariConfig@5c7f3ae2
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Starting...
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@270169e4
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.pool.HikariPool[0;39m - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70fe1622
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - JdbcPaymentRepository workers started
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mcom.zaxxer.hikari.HikariDataSource[0;39m - HikariPool-1 - Start completed.
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - JdbcPaymentRepository workers started
+backend-api2   | 2025-08-06 17:16:17 [repository-worker-0] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - Repository worker 0 started
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mio.undertow[0;39m - starting server: Undertow - 2.3.18.Final
+backend-api1   | 2025-08-06 17:16:17 [repository-worker-0] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - Repository worker 0 started
+backend-api2   | 2025-08-06 17:16:17 [repository-worker-1] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - Repository worker 1 started
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36morg.xnio[0;39m - XNIO version 3.8.16.Final
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36morg.xnio.nio[0;39m - XNIO NIO Implementation Version 3.8.16.Final
+backend-api1   | 2025-08-06 17:16:17 [repository-worker-1] [34mINFO [0;39m [36mb.c.c.r.r.JdbcPaymentRepository[0;39m - Repository worker 1 started
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mio.undertow[0;39m - starting server: Undertow - 2.3.18.Final
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36morg.xnio[0;39m - XNIO version 3.8.16.Final
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36morg.xnio.nio[0;39m - XNIO NIO Implementation Version 3.8.16.Final
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36morg.jboss.threads[0;39m - JBoss Threads version 3.5.0.Final
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36morg.jboss.threads[0;39m - JBoss Threads version 3.5.0.Final
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Default service URL: http://payment-processor-default:8080/payments 
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Fallback fallback URL: http://payment-processor-fallback:8080/payments
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Timeout: PT6S
+backend-api2   | 2025-08-06 17:16:17 [payment-processor-0] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 0
+backend-api2   | 2025-08-06 17:16:17 [payment-processor-1] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 1
+backend-api2   | 2025-08-06 17:16:17 [payment-processor-3] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 3
+backend-api2   | 2025-08-06 17:16:17 [payment-processor-2] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 2
+backend-api2   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor workers: 4
 backend-api2   | 
 backend-api2   |  ##########     (Si vis pacem, para bellum)     ##########
 backend-api2   | >>> ccs1201 follow on linkedisney -> https://www.linkedin.com/in/ccs1201/
 backend-api2   | >>> follow on github -> https://github.com/ccs1201
 backend-api2   | 
-backend-api1   | 2025-08-05 01:55:27 [main] [34mINFO [0;39m [36mbr.com.ccs.rinha.RinhaApp[0;39m - Server started! Let's play @RinhaDeBackend
-backend-api2   | 2025-08-05 01:55:27 [main] [34mINFO [0;39m [36mbr.com.ccs.rinha.RinhaApp[0;39m - Server started! Let's play @RinhaDeBackend
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Default service URL: http://payment-processor-default:8080/payments 
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Fallback fallback URL: http://payment-processor-fallback:8080/payments
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.s.PaymentProcessorClient[0;39m - Timeout: PT6S
+backend-api1   | 2025-08-06 17:16:17 [payment-processor-0] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 0
+backend-api1   | 2025-08-06 17:16:17 [payment-processor-1] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 1
+backend-api1   | 2025-08-06 17:16:17 [main] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor workers: 4
+backend-api1   | 
+backend-api1   |  ##########     (Si vis pacem, para bellum)     ##########
+backend-api1   | >>> ccs1201 follow on linkedisney -> https://www.linkedin.com/in/ccs1201/
+backend-api1   | >>> follow on github -> https://github.com/ccs1201
+backend-api1   | 
+backend-api1   | 2025-08-06 17:16:17 [payment-processor-3] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 3
+backend-api1   | 2025-08-06 17:16:17 [payment-processor-2] [34mINFO [0;39m [36mb.c.c.r.w.PaymentProcessorWorker[0;39m - Payment processor worker started: 2
+backend-api2   | 2025-08-06 17:16:18 [main] [34mINFO [0;39m [36mbr.com.ccs.rinha.RinhaApp[0;39m - Server started! Let's play @RinhaDeBackend
+backend-api1   | 2025-08-06 17:16:18 [main] [34mINFO [0;39m [36mbr.com.ccs.rinha.RinhaApp[0;39m - Server started! Let's play @RinhaDeBackend
 [Kbackend-nginx exited with code 0
-[Kbackend-api1 exited with code 137
 [Kbackend-api2 exited with code 137
-backend-db     | 2025-08-05 01:56:44.487 UTC [1] LOG:  received fast shutdown request
-backend-db     | 2025-08-05 01:56:44.495 UTC [1] LOG:  aborting any active transactions
-backend-db     | 2025-08-05 01:56:44.497 UTC [1] LOG:  background worker "logical replication launcher" (PID 75) exited with exit code 1
-backend-db     | 2025-08-05 01:56:44.499 UTC [70] LOG:  shutting down
-backend-db     | 2025-08-05 01:56:44.510 UTC [70] LOG:  checkpoint starting: shutdown immediate
-backend-db     | 2025-08-05 01:56:44.586 UTC [70] LOG:  checkpoint complete: wrote 331 buffers (2.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.028 s, sync=0.020 s, total=0.087 s; sync files=20, longest=0.012 s, average=0.001 s; distance=826 kB, estimate=826 kB; lsn=0/19E6B60, redo lsn=0/19E6B60
-backend-db     | 2025-08-05 01:56:44.592 UTC [1] LOG:  database system is shut down
+[Kbackend-api1 exited with code 137
+backend-db     | 2025-08-06 17:17:47.335 UTC [1] LOG:  received fast shutdown request
+backend-db     | 2025-08-06 17:17:47.344 UTC [1] LOG:  aborting any active transactions
+backend-db     | 2025-08-06 17:17:47.347 UTC [1] LOG:  background worker "logical replication launcher" (PID 76) exited with exit code 1
+backend-db     | 2025-08-06 17:17:47.348 UTC [71] LOG:  shutting down
+backend-db     | 2025-08-06 17:17:47.358 UTC [71] LOG:  checkpoint starting: shutdown immediate
+backend-db     | 2025-08-06 17:17:47.421 UTC [71] LOG:  checkpoint complete: wrote 264 buffers (1.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.013 s, sync=0.028 s, total=0.073 s; sync files=21, longest=0.024 s, average=0.002 s; distance=669 kB, estimate=669 kB; lsn=0/19BF970, redo lsn=0/19BF970
+backend-db     | 2025-08-06 17:17:47.427 UTC [1] LOG:  database system is shut down
 [Kbackend-db exited with code 0
 log truncated at line 1000

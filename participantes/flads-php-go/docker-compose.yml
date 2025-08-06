@@ -1,6 +1,7 @@
 x-service-templates:
   api: &api
-    image: flads/rinha25-php-go-api:0.1.2
+    image: flads/rinha25-php-go-api:0.2.0
+    user: "1000:1001"
     networks:
       - main-network
       - payment-processor
@@ -28,10 +29,18 @@ services:
   api-1:
     <<: *api
     container_name: api-1
+    volumes:
+      - sockets:/tmp/sockets
+    environment:
+      - SOCKET_PATH=/tmp/sockets/api-1.sock
 
   api-2:
     <<: *api
     container_name: api-2
+    volumes:
+      - sockets:/tmp/sockets
+    environment:
+      - SOCKET_PATH=/tmp/sockets/api-2.sock
 
   worker-1:
     <<: *worker
@@ -42,9 +51,11 @@ services:
     container_name: worker-2
 
   haproxy:
-    image: haproxy:latest
+    image: haproxy:alpine
     volumes:
-      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - sockets:/sockets
+    user: "1000:1001"
     ports:
       - "9999:9999"
     networks:
@@ -72,6 +83,9 @@ services:
         limits:
           cpus: "0.2"
           memory: "30MB"
+
+volumes:
+  sockets:
 
 networks:
   main-network:

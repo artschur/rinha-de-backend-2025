@@ -1,6 +1,5 @@
 
-time="2025-08-04T22:07:49-03:00" level=warning msg="2 inconsistências encontradas." source=console
-time="2025-08-04T22:08:09-03:00" level=warning msg="2144 inconsistências encontradas." source=console
-time="2025-08-04T22:08:19-03:00" level=warning msg="602 inconsistências encontradas." source=console
-time="2025-08-04T22:08:30-03:00" level=info msg="summaries from 2025-08-05T01:07:20.336Z to 2025-08-05T01:08:30.336Z" source=console
+time="2025-08-05T12:33:36-03:00" level=warning msg="4 inconsistências encontradas." source=console
+time="2025-08-05T12:33:47-03:00" level=warning msg="8 inconsistências encontradas." source=console
+time="2025-08-05T12:33:57-03:00" level=info msg="summaries from 2025-08-05T15:32:47.744Z to 2025-08-05T15:33:57.744Z" source=console
 log truncated at line 1000

@@ -5,6 +5,6 @@
     "langs": ["php", "go"],
     "storages": ["redis"],
     "messaging": [],
-    "load-balancers": ["nginx"],
-    "other-technologies": ["fasthttp"]
+    "load-balancers": ["haproxy"],
+    "other-technologies": ["gin"]
 }

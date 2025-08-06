@@ -2,7 +2,8 @@
 
 Projeto desenvolvido para a competição Rinha de Backend 2025, onde o objetivo é criar uma API RESTful para pagamentos.
 
-Repositório com o projeto: [jjeanjacques10/rinha-de-backend-2025](https://github.com/jjeanjacques10/rinha-de-backend-2025)
+Repositório com o
+projeto: [jjeanjacques10/rinha-de-backend-2025](https://github.com/jjeanjacques10/rinha-de-backend-2025)
 
 ## Tecnologias Utilizadas 🚀
 
@@ -21,7 +22,7 @@ Repositório com o projeto: [jjeanjacques10/rinha-de-backend-2025](https://githu
 Segue uma tabela resumindo a estrutura do projeto:
 
 | Caminho                                             | Descrição                                                       |
-|-----------------------------------------------------|-----------------------------------------------------------------|
+| --------------------------------------------------- | --------------------------------------------------------------- |
 | `app/`                                              | Aplicação principal Spring Boot                                 |
 | ├─ `Dockerfile`                                     | Dockerfile para build da aplicação                              |
 | ├─ `src/main/kotlin/com/jjeanjacques/rinhabackend/` | Código-fonte Kotlin                                             |
@@ -35,13 +36,13 @@ Segue uma tabela resumindo a estrutura do projeto:
 
 - Gerar imagem do docker 🐳
 
-```
+``` bash
 docker build -t jjeanjacques10/payment-processor .
 ```
 
 - Subir infraestrutura de banco e orquestração 🏗️
 
-```
+``` bash
 docker-compose -f payment-processor/docker-compose.yml up -d
 ```
 
@@ -51,7 +52,7 @@ docker-compose -f payment-processor/docker-compose.yml up -d
 
 Para executar os testes de carga, utilize o script `rinha.js` localizado na pasta `rinha-test/`:
 
-```
+``` bash
 k6 run ./rinha-test/rinha.js
 ```
 
@@ -69,7 +70,7 @@ O script `test_java.sh` realiza os seguintes passos:
 
 Para executar:
 
-```
+``` bash
 ./test_java.sh
 ```
 
@@ -85,18 +86,18 @@ O script `test_java_native_graalvm.sh` realiza os seguintes passos:
 
 Para executar:
 
-```
+``` bash
 ./test_java_native_graalvm.sh
 ```
 
 #### Publicação da imagem Docker com GraalVM
 
 Nome da imagem local: `docker.io/jjeanjacques10/rinhabackend2025:graalvm`
-Nome da imagem remota: `jjeanjacques/rinhabackend2025:graalvm-v3.0`
+Nome da imagem remota: `jjeanjacques/rinhabackend2025:graalvm-v4.0`
 
 ``` bash
-docker tag docker.io/jjeanjacques10/rinhabackend2025:graalvm jjeanjacques/rinhabackend2025:graalvm-v3.0
-docker push jjeanjacques/rinhabackend2025:graalvm-v3.0
+docker tag docker.io/jjeanjacques10/rinhabackend2025:graalvm jjeanjacques/rinhabackend2025:graalvm-v4.0
+docker push jjeanjacques/rinhabackend2025:graalvm-v4.0
 ```
 
 ## Endpoints 📖

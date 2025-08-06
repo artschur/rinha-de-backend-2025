@@ -21,7 +21,7 @@ services:
   api01: &api
     hostname: api01
     container_name: payments-01
-    image: ghcr.io/andrelucasti/rinha-backend-2025-payments:latest
+    image: ghcr.io/andrelucasti/rinha-backend-2025-payments:v1.0.1
     environment:
       PAYMENT_PROCESSOR_DEFAULT_BASE_URL: http://payment-processor-default:8080
       PAYMENT_PROCESSOR_FALLBACK_BASE_URL: http://payment-processor-fallback:8080
@@ -33,6 +33,7 @@ services:
       CONSUMER_BLOCK: 5000
       CONSUMER_COUNT: 3
       CONSUMER_DELAY: 1
+      LOG_LEVEL: INFO
     networks:
       - rinha-network
       - payment-processor
@@ -60,7 +61,7 @@ services:
       CONSUMER_NAME: payments-02
       CONSUMER_BLOCK: 5000
       CONSUMER_COUNT: 3
-      CONSUMER_DELAY: 1
+      LOG_LEVEL: INFO
     deploy:
       resources:
         limits:

@@ -1,6 +1,6 @@
 services:
   api-1: &api
-    image: gustavotbett/rinha-backend-2025-api:20250805-005411
+    image: gustavotbett/rinha-backend-2025-api:20250805-022004
     hostname: api
     networks:
       - internal
@@ -22,8 +22,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "125MB"
+          cpus: "0.6"
+          memory: "150MB"
 
   api-2:
     <<: *api
@@ -46,20 +46,20 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.2"
-          memory: "20MB"
+          cpus: "0.1"
+          memory: "15MB"
 
   redis:
     image: redis:8.0.3-alpine
     container_name: redis
-    command: [ "redis-server", "--maxmemory", "80mb", "--maxmemory-policy", "allkeys-lru" ]
+    command: [ "redis-server", "--maxmemory", "35mb", "--maxmemory-policy", "allkeys-lru" ]
     networks:
       - internal
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "80MB"
+          cpus: "0.2"
+          memory: "35MB"
 
 networks:
   internal:

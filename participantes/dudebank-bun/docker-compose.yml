@@ -1,10 +1,10 @@
 services:
-  write_api: &api-service
-    image: eber404/dudebank:0.0.7
+  api-1: &api-service
+    image: eber404/dudebank:0.0.8
     env_file:
       - .env
     environment:
-      - SERVER_SOCKET_PATH=/tmp/write_api.sock
+      - SERVER_SOCKET_PATH=/tmp/api_1.sock
     networks:
       - backend
       - payment-processor
@@ -15,21 +15,16 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.25'
-          memory: '275MB'
+          cpus: '0.675'
+          memory: '135MB'
 
-  read_api:
+  api-2:
     <<: *api-service
     environment:
-      - SERVER_SOCKET_PATH=/tmp/read_api.sock
-    deploy:
-      resources:
-        limits:
-          cpus: '0.1'
-          memory: '40MB'
+      - SERVER_SOCKET_PATH=/tmp/api_2.sock
 
   database:
-    image: eber404/dudebank-db:0.0.7
+    image: eber404/dudebank-db:0.0.8
     volumes:
       - socket_data:/tmp
     networks:
@@ -40,25 +35,22 @@ services:
           cpus: '0.05'
           memory: '15MB'
 
-  nginx:
-    image: openresty/openresty:bullseye
-    env_file:
-      - .env
+  load-balancer:
+    image: eber404/dudebank-balancer:0.0.1
     volumes:
-      - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf:ro
       - socket_data:/tmp
-    depends_on:
-      - write_api
-      - read_api
     networks:
       - backend
     ports:
       - '9999:80'
+    depends_on:
+      - api-1
+      - api-2
     deploy:
       resources:
         limits:
           cpus: '0.1'
-          memory: '20MB'
+          memory: '65MB'
 
 networks:
   backend:

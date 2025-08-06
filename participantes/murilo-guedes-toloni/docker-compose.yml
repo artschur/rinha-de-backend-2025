@@ -16,7 +16,7 @@ services:
       resources:
         limits:
           cpus: "0.6"
-          memory: "70MB"
+          memory: "100MB"
   api1: &api
     image: enermaxx/rinha-backend:2.2.12
     container_name: springboot-api1
@@ -38,7 +38,7 @@ services:
       resources:
         limits:
           cpus: "0.45"
-          memory: "140MB"
+          memory: "125MB"
 
   api2:
     <<: *api
@@ -58,7 +58,7 @@ services:
       resources:
         limits:
           cpus: "0.45"
-          memory: "140MB"
+          memory: "125MB"
 networks:
   backend:
     driver: bridge
